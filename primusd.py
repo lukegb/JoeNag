@@ -9,7 +9,12 @@ CHECK_GIT_FOR_UPDATES_EVERY_MINUTES = 1
 
 update_git_timer = 0
 
-print "Starting up..."
+SAY_VOICE = "Alex"
+
+def do_say(saying, voice=SAY_VOICE):
+    subprocess.call(['say', '-v', voice, saying)
+
+do_say("Starting up...", voice="Trinoids")
 while True:
     try:
         now = time.time()
