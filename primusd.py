@@ -12,7 +12,7 @@ update_git_timer = 0
 SAY_VOICE = "Alex"
 
 def do_say(saying, voice=SAY_VOICE):
-    subprocess.call(['say', '-v', voice, saying)
+    subprocess.call(['say', '-v', voice, saying])
 
 do_say("Starting up...", voice="Trinoids")
 while True:
